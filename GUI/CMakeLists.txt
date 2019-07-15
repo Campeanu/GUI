@@ -10,11 +10,15 @@ set(SOURCES
     src/main.cpp
 )
 
+
+# -------------------------------------------
 # How to add a directory to include path: 
 # include_directories(${variable}/include)
 
 # How to add a directory to link path: 
 # link_directories(${variable}/lib)
+# -------------------------------------------
+
 
 # How to add compilation definitions:
 # add_compile_definitions(difinition)
@@ -25,12 +29,13 @@ add_executable(${This} ${SOURCES} ${HEADERS})
 # library
 # add_library(${This} STATIC ${SOURCES} ${HEADERS})
 
-# target_link_libraries(${This} PUBLIC
-#    GLAD
-#    GLEW
-#    GLFW
-#    ImGUI
-# )
+ target_link_libraries(${This} PUBLIC
+    GLEW
+    GLAD
+    glfw
+    ImGUI
+    opengl32
+ )
 
 target_include_directories(${This} PUBLIC include)
 

@@ -52,6 +52,8 @@ if(ParentDirectory STREQUAL "")
     # set(GLFW   "${CMAKE_CURRENT_SOURCE_DIR}/Engine/vendor/GLFW")
 
     # All other libraries can be pulled in without further configuration.    
+    
+    add_subdirectory(GUI/vendor)
 
 endif(ParentDirectory STREQUAL "")
 
