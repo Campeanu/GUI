@@ -28,6 +28,9 @@ set(SOURCES
 add_compile_definitions(IMGUI_IMPL_OPENGL_LOADER_GLEW)
 add_compile_definitions(GLEW_STATIC)
 
+# How to set an output path for an executable file  
+# set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR}/bin)
+
 # executable
 add_executable(${This} ${SOURCES} ${HEADERS})
 
